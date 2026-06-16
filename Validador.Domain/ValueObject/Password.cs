@@ -1,11 +1,23 @@
 namespace Validador.Domain.ValueObject;
 
-public class Password
+public sealed class Password
 {
     public string Value { get; }
 
-    public Password(string value)
+    private Password(string value)
     {
-        Value = value ?? string.Empty;
+        Value = value;
+    }
+
+    public sealed class Builder(string value)
+    {
+        private readonly string _value = value ?? string.Empty;
+
+        public Password Build(Interfaces.IPasswordValidator validator)
+        {
+            var password = new Password(_value);
+            validator.Validate(password);
+            return password;
+        }
     }
 }
