@@ -1,1 +1,15 @@
-<Solution />
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Adapters/">
+    <Project Path="Validador.API/Validador.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Application/">
+    <Project Path="Validador.Application/Validador.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Domain/">
+    <Project Path="Validador.Domain/Validador.Domain.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="Validador.UnitTest/Validador.UnitTest.csproj" />
+  </Folder>
+</Solution>

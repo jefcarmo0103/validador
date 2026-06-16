@@ -15,6 +15,8 @@ public class ValidatePasswordUseCase : IValidatePasswordUseCase
 
     public void Execute(string password)
     {
-        new Password.Builder(password).Build(_passwordValidator);
+        new Password
+            .Builder(password)
+            .Build(_passwordValidator);
     }
 }

@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Validador.Application.Interfaces;
 
@@ -22,4 +23,4 @@ public class PasswordController : ControllerBase
     }
 }
 
-public record PasswordRequest(string Password);
+public record PasswordRequest([Required(AllowEmptyStrings = false)] string Password);
